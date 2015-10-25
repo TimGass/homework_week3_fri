@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+*:focus {
+  outline: none; }
+
+body {
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+  body section.viewbox {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    body section.viewbox:last-child {
+      margin-right: 0; }
+    body section.viewbox #clear {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 24.42593%;
+      padding: 20px;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter; }
+      body section.viewbox #clear:last-child {
+        margin-right: 0; }
+      body section.viewbox #clear:nth-child(n) {
+        margin-right: 0; }
+      body section.viewbox #clear:hover {
+        background-color: #83C178; }
+    body section.viewbox #view {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 73.21641%;
+      padding: 17.5px;
+      font-size: 20px;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter; }
+      body section.viewbox #view:last-child {
+        margin-right: 0; }
+  body section {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    body section:last-child {
+      margin-right: 0; }
+    body section input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 24.42593%;
+      padding: 20px;
+      background-color: #64B255;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter; }
+      body section input:last-child {
+        margin-right: 0; }
+      body section input:nth-child(n) {
+        margin-right: 0; }
+    body section #multiply {
+      color: #42623B;
+      background-color: #83C178; }
+    body section #divide {
+      color: #42623B;
+      background-color: #83C178; }
+    body section #add {
+      color: #42623B;
+      background-color: #83C178; }
+    body section #subtract {
+      color: #42623B;
+      background-color: #83C178; }
+    body section #equal:hover {
+      background-color: #83C178; }

@@ -1,0 +1,77 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+*{
+  &:focus{
+    outline: none;
+  }
+}
+
+body{
+  @include outer-container(25%);
+  padding-top: 70px;
+
+  section.viewbox{
+    @include span-columns(12);
+
+    #clear{
+      @include span-columns(3.14);
+      @include omega(n);
+      padding: 20px;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter;
+
+      &:hover{
+        background-color: #83C178;
+      }
+    }
+
+    #view{
+      @include span-columns(8.86);
+      padding: 17.5px;
+      font-size: 20px;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter;
+    }
+  }
+
+  section{
+    @include span-columns(12);
+
+    input{
+      @include span-columns(3.14);
+      @include omega(n);
+      padding: 20px;
+      background-color: #64B255;
+      border: 1px solid #8CC682;
+      color: #FFF;
+      font-weight: lighter;
+    }
+
+    #multiply{
+      color:#42623B;
+      background-color: #83C178;
+    }
+
+    #divide{
+      color:#42623B;
+      background-color: #83C178;
+    }
+
+    #add{
+      color:#42623B;
+      background-color: #83C178;
+    }
+
+    #subtract{
+      color:#42623B;
+      background-color: #83C178;
+    }
+
+    #equal:hover{
+      background-color: #83C178;
+    }
+  }
+}
