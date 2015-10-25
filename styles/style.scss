@@ -75,3 +75,17 @@ body{
     }
   }
 }
+
+@media (max-width: 672px) {
+  body{
+    @include outer-container(50%);
+    padding-top: 70px;
+  }
+}
+
+@media (min-width: 673px) and (max-width:980px) {
+  body{
+    @include outer-container(40%);
+    padding-top: 70px;
+  }
+}
