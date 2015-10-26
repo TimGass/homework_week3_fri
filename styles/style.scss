@@ -15,7 +15,7 @@ body{
     @include span-columns(12);
 
     #clear{
-      @include span-columns(3.14);
+      @include span-columns(3.15);
       @include omega(n);
       padding: 20px;
       border: 1px solid #8CC682;
