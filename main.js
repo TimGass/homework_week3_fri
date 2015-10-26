@@ -84,8 +84,8 @@ function charles(yolo) {
       document.getElementById('view').value = document.getElementById('view').value.slice(0, (document.getElementById('view').value.length -1));
   }
 
-  else if (keyCode === 18) {
-    downKeys = "alt";
+  else if (keyCode === 16) {
+    downKeys = "shift";
   }
 
   else if (keyCode === 187) {
