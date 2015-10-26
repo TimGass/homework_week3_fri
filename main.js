@@ -94,6 +94,7 @@ function dotheThing(thing){
 
   if(operatorArray.length === 0){
     answer = thing;
+    clicked = false;
   }
 
   return answer;
@@ -103,8 +104,8 @@ function charles(yolo) {
   var keyCode = yolo.keyCode;
 
   if(keyCode === 13) {
-      document.getElementById('view').value = dotheThing(document.getElementById('view').value);
       clicked = true;
+      document.getElementById('view').value = dotheThing(document.getElementById('view').value);
   }
 
   else if (keyCode === 67) {
@@ -299,6 +300,37 @@ function charles(yolo) {
   }
 }
 
+function text(yolo) {
+
+  var keyCode = yolo.keyCode;
+
+  if(keyCode === 13) {
+      clicked = true;
+      document.getElementById('view').value = dotheThing(document.getElementById('view').value);
+  }
+
+  else if (keyCode === 67) {
+    setTimeout(function(){
+    document.getElementById('view').value = "";
+  }, 1);
+  }
+
+  else if (keyCode === 187) {
+    if (downKeys.length === 0) {
+      document.getElementById('view').value = dotheThing(document.getElementById('view').value).slice(0, ((dotheThing(document.getElementById('view').value)).length));
+    }
+    else{
+      setTimeout(function(){
+      downKeys = "";
+      }, 1);
+    }
+  }
+
+  else if (keyCode === 18) {
+    downKeys = "alt";
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function(){
   function clickHandler(event){
@@ -329,6 +361,14 @@ document.addEventListener("DOMContentLoaded", function(){
   clickHandler(document.getElementById("add"));
 
   document.addEventListener("keydown", charles, false);
+  document.getElementById('view').addEventListener("focusin", function(){
+    document.removeEventListener("keydown", charles, false);
+    document.addEventListener("keydown", text, false);
+  });
+  document.getElementById("view").addEventListener("focusout", function(){
+    document.addEventListener("keydown", charles, false);
+    document.removeEventListener("keydown", text, false);
+  })
 
     document.getElementById("multiply").addEventListener("click", function(){
     document.getElementById('view').value += "*";
@@ -339,10 +379,8 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
   document.getElementById("equal").addEventListener("click", function(){
-    console.log(document.getElementById('view').value);
-    document.getElementById('view').value = dotheThing(document.getElementById('view').value);
-    console.log(document.getElementById('view').value);
     clicked = true;
+    document.getElementById('view').value = dotheThing(document.getElementById('view').value);
   });
 
 });
